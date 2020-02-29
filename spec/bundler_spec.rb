@@ -70,7 +70,7 @@ describe "Bundler" do
   #       end
   #       expect(bundle_output_without_test =~ /rspec/).to eq(nil)
   #     end
-  #   end
+    end
   end
 
   # This may exist from having run bundle install in other tests
