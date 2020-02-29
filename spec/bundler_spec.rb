@@ -59,19 +59,19 @@ describe "Bundler" do
         expect(bundle_output_without_development =~ /pry/).to eq(nil)
       end
 
-      # http://bundler.io/v1.3/groups.html
-      it "should contain the rspec gem in the test group using block syntax" do
-        expect(@gemfile_text =~ /group (:test|['"]test['"]) do/).not_to eq(nil)
-        expect(@bundle_output =~ /rspec/).not_to eq(nil)
+  #     # http://bundler.io/v1.3/groups.html
+  #     it "should contain the rspec gem in the test group using block syntax" do
+  #       expect(@gemfile_text =~ /group (:test|['"]test['"]) do/).not_to eq(nil)
+  #       expect(@bundle_output =~ /rspec/).not_to eq(nil)
 
-        bundle_output_without_test = ""
-        Bundler.with_clean_env do
-          bundle_output_without_test = `bundle --without test`
-        end
-        expect(bundle_output_without_test =~ /rspec/).to eq(nil)
-      end
-    end
-  end
+  #       bundle_output_without_test = ""
+  #       Bundler.with_clean_env do
+  #         bundle_output_without_test = `bundle --without test`
+  #       end
+  #       expect(bundle_output_without_test =~ /rspec/).to eq(nil)
+  #     end
+  #   end
+  # end
 
   # This may exist from having run bundle install in other tests
   describe "bundle install" do
